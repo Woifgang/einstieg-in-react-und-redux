@@ -1,26 +1,54 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import TodoList from './TodoList';
+import TodoAdd from './TodoAdd';
+
+class App extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            todo: [
+                // {id: 1, titlasdfe: "Obst kaufen"},
+            //     // {id: 2, title: "Banane kaufen"},
+            //     // {id: 3, title: "Kirsch kaufen"},
+            ]
+
+        }
+
+        this.addTodo = this.addTodo.bind(this);
+    }
+
+    addTodo(title) {
+        let todos = this.state.todo;
+        let maxId = 0;
+
+        for (let todo of todos) {
+            if (todo.id > maxId) {
+                maxId = todo.id;
+            }
+        }
+
+        todos.push({id: maxId + 1, title: title});
+
+        this.setState({
+            todo: todos
+        })
+    }
+
+    render() {
+        return (
+            <div className="App">
+                <h1>Todo-List</h1>
+                <TodoList todo={this.state.todo}></TodoList>
+                <br/>
+                <TodoAdd onAdd={this.addTodo}></TodoAdd>
+                {/*<button onClick={this.addTodo}>Add Todo</button>*/}
+            </div>
+        );
+    }
 }
 
 export default App;
