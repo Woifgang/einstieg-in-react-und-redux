@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import './TodoList.css';
+import {connect} from 'react-redux';
+import {incrementCounter} from "../actions/index";
 
 
 import Panel from './Panel';
@@ -12,11 +13,7 @@ class TodoList extends Component {
         return (
             <Panel title="Todos">
                 <ul className="TodoList-li">
-                    {this.props.todo.map((todo) => {
-                        return (
-                            <li key={todo.id}>#{todo.id}: {todo.title}</li>
-                        )
-                    })}
+                    hier weiter
                 </ul>
 
             </Panel>
@@ -24,13 +21,7 @@ class TodoList extends Component {
     }
 }
 
-TodoList.propTypes = {
-  todo :   PropTypes.arrayOf(
-      PropTypes.shape({
-          id: PropTypes.number.isRequired,
-          title: PropTypes.string.isRequired
-      })
-  )
-};
+let mapStateToProps = (state) => {
+}
 
 export default TodoList;
