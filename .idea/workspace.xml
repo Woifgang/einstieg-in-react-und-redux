@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b67c0062-1c6a-4723-ae21-5dd382373d95" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +97,7 @@
       <updated>1583698480521</updated>
       <workItem from="1583698481875" duration="2249000" />
       <workItem from="1583759970281" duration="8583000" />
-      <workItem from="1583867448687" duration="2685000" />
+      <workItem from="1583867448687" duration="3222000" />
     </task>
     <task id="LOCAL-00001" summary="Kapitel 1-4">
       <created>1583782718886</created>
@@ -119,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583869472418</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="React-Redux und die connect() - Funktion">
+      <created>1583870381487</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1583870381487</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,7 +149,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Kapitel 1-4" />
     <MESSAGE value="klickzähler mit redux" />
-    <option name="LAST_COMMIT_MESSAGE" value="klickzähler mit redux" />
+    <MESSAGE value="React-Redux und die connect() - Funktion" />
+    <option name="LAST_COMMIT_MESSAGE" value="React-Redux und die connect() - Funktion" />
   </component>
   <component name="WindowStateProjectService">
     <state x="418" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583782870303">
@@ -152,10 +161,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="743" y="247" width="424" height="579" key="#com.intellij.ide.macro.MacrosDialog/0.1103.1920.1080/0.0.1920.1080/1920.23.1920.1080@0.0.1920.1080" timestamp="1583765080387" />
-    <state x="183" y="127" width="1544" height="818" key="CommitChangelistDialog2" timestamp="1583869472269">
+    <state x="183" y="127" width="1544" height="818" key="CommitChangelistDialog2" timestamp="1583870381339">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="183" y="127" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1583869472269" />
+    <state x="183" y="127" width="1544" height="818" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1583870381339" />
     <state x="183" y="127" width="1544" height="818" key="CommitChangelistDialog2/0.1103.1920.1080/0.0.1920.1080/1920.23.1920.1080@0.0.1920.1080" timestamp="1583782765421" />
     <state x="825" y="435" key="Github.ShareDialog" timestamp="1583782658625">
       <screen x="0" y="0" width="1920" height="1080" />

@@ -4,33 +4,17 @@ import './index.css';
 import App from './components/App';
 import * as serviceWorker from './components/serviceWorker';
 import {createStore} from "redux";
-import {connect} from "react-redux";
 import counter from "./reducers/index";
-import {incrementCounter} from "./actions/index";
+import {Provider} from "react-redux";
 
 let store = createStore(counter);
 
-let mapStateToProps = function (state) {
-    return {
-        value: state
-    };
-}
-
-let mapDispatchToProbs = {
-    onIncrement: incrementCounter
-}
-
-let App2 = connect(mapStateToProps, mapDispatchToProbs)(App);
-
 
 ReactDOM.render(
-    // <App
-    //     value={store.getState()}
-    //     onIncrement={() => {
-    //         store.dispatch(incrementCounter());
-    //     }}
-    // />,
-    <App2 store={store}/>,
+    <Provider store={store}>
+        <App/>
+    </Provider>
+    ,
     document.getElementById('root')
 );
 

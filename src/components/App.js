@@ -3,6 +3,8 @@ import './App.css';
 
 import TodoList from './TodoList';
 import TodoAdd from './TodoAdd';
+import {incrementCounter} from "../actions";
+import {connect} from "react-redux";
 
 class App extends Component {
 
@@ -53,4 +55,18 @@ class App extends Component {
     }
 }
 
-export default App;
+
+let mapStateToProps = function (state) {
+    return {
+        value: state
+    };
+}
+
+let mapDispatchToProbs = {
+    onIncrement: incrementCounter
+}
+
+let AppContainer = connect(mapStateToProps, mapDispatchToProbs)(App);
+
+
+export default AppContainer;
