@@ -1,8 +1,18 @@
-function counter(state = 0, action) {
+let initialState = {
+    counter: 0,
+    todos: [
+        {id: 5, title: "hallo welt"},
+        {id: 10, title: "hallo welt10"}
+    ]
+}
+
+function counter(state = initialState, action) {
     if (action.type == "INCREMENT") {
-        return state + 1;
+        return {
+            counter: state.counter + 1
+        }
     } else {
-        return state;
+        return state
     }
 }
 

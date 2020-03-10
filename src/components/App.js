@@ -58,7 +58,7 @@ class App extends Component {
 
 let mapStateToProps = function (state) {
     return {
-        value: state
+        value: state.counter
     };
 }
 
