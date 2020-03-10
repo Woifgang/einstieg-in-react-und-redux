@@ -4,29 +4,35 @@ import './index.css';
 import App from './components/App';
 import * as serviceWorker from './components/serviceWorker';
 import {createStore} from "redux";
+import {connect} from "react-redux";
 import counter from "./reducers/index";
 import {incrementCounter} from "./actions/index";
 
 let store = createStore(counter);
-console.log(store.getState());
-store.dispatch(incrementCounter());
-console.log(store.getState());
 
-
-
-let render =()=>{
-    ReactDOM.render(
-        <App
-            value={store.getState()}
-            onIncrement={() => {
-                store.dispatch(incrementCounter());
-            }}
-        />,
-        document.getElementById('root')
-    );
+let mapStateToProps = function (state) {
+    return {
+        value: state
+    };
 }
-render();
-store.subscribe(render);
+
+let mapDispatchToProbs = {
+    onIncrement: incrementCounter
+}
+
+let App2 = connect(mapStateToProps, mapDispatchToProbs)(App);
+
+
+ReactDOM.render(
+    // <App
+    //     value={store.getState()}
+    //     onIncrement={() => {
+    //         store.dispatch(incrementCounter());
+    //     }}
+    // />,
+    <App2 store={store}/>,
+    document.getElementById('root')
+);
 
 
 // If you want your app to work offline and load faster, you can change
