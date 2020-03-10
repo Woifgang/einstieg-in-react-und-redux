@@ -12,8 +12,8 @@ class App extends Component {
         this.state = {
             todo: [
                 // {id: 1, titlasdfe: "Obst kaufen"},
-            //     // {id: 2, title: "Banane kaufen"},
-            //     // {id: 3, title: "Kirsch kaufen"},
+                //     // {id: 2, title: "Banane kaufen"},
+                //     // {id: 3, title: "Kirsch kaufen"},
             ]
 
         }
@@ -46,6 +46,8 @@ class App extends Component {
                 <br/>
                 <TodoAdd onAdd={this.addTodo}></TodoAdd>
                 {/*<button onClick={this.addTodo}>Add Todo</button>*/}
+                <h1>Klickzähler: {this.props.value}</h1>
+                <button onClick={this.props.onIncrement}>zähle hoch</button>
             </div>
         );
     }
