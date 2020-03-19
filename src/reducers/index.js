@@ -6,14 +6,23 @@ let initialState = {
     ]
 }
 
-function counter(state = initialState, action) {
+function counter(state, action) {
     if (action.type == "INCREMENT") {
-        return {
-            counter: state.counter + 1
-        }
+        return state + 1;
     } else {
         return state
     }
 }
 
-export default counter;
+function todos(state, action) {
+    return state;
+}
+
+function reduce(state = initialState, action) {
+    return {
+        counter: counter(state.counter, action),
+        todos: todos(state.todos, action)
+    }
+}
+
+export default reduce;

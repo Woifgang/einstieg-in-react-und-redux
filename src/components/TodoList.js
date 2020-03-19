@@ -13,7 +13,12 @@ class TodoList extends Component {
         return (
             <Panel title="Todos">
                 <ul className="TodoList-li">
-                    hier weiter
+                    {this.props.todos.map((todos) => {
+                        return (
+                            <li key={todos.id}> {todos.title}
+                            </li>
+                        )
+                    })}
                 </ul>
 
             </Panel>
@@ -22,6 +27,14 @@ class TodoList extends Component {
 }
 
 let mapStateToProps = (state) => {
+    return {
+        todos: state.todos
+    }
 }
 
-export default TodoList;
+let mapDispatchToProps = {}
+
+let TodoListContainer = connect(mapStateToProps, mapDispatchToProps)(TodoList);
+
+export default TodoListContainer;
+
