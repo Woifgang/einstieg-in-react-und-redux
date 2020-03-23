@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import './TodoList.css';
 import {connect} from 'react-redux';
-import {incrementCounter} from "../actions/index";
+import {addTodo, incrementCounter} from "../actions/index";
+import TodoAdd from "./TodoAdd";
 
 
 import Panel from './Panel';
@@ -20,7 +21,13 @@ class TodoList extends Component {
                         )
                     })}
                 </ul>
-
+                {/*<button onClick={() => {*/}
+                {/*    this.props.addTodo("3. todo")*/}
+                {/*}}>Hinzufügen*/}
+                {/*</button>*/}
+                <TodoAdd onAdd={(title) => {
+                    this.props.addTodo(title)
+                }}/>
             </Panel>
         );
     }
@@ -32,7 +39,9 @@ let mapStateToProps = (state) => {
     }
 }
 
-let mapDispatchToProps = {}
+let mapDispatchToProps = {
+    addTodo: addTodo
+}
 
 let TodoListContainer = connect(mapStateToProps, mapDispatchToProps)(TodoList);
 

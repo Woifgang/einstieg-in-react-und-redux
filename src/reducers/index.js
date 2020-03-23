@@ -1,28 +1,26 @@
-let initialState = {
-    counter: 0,
-    todos: [
-        {id: 5, title: "hallo welt"},
-        {id: 10, title: "hallo welt10"}
-    ]
-}
+import {combineReducers} from "redux";
 
-function counter(state, action) {
-    if (action.type == "INCREMENT") {
-        return state + 1;
-    } else {
-        return state
-    }
-}
+import counter from "./counter";
+import todos from "./todos";
 
-function todos(state, action) {
-    return state;
-}
+let reduce = combineReducers({
+    counter: counter,
+    todos: todos
+});
 
-function reduce(state = initialState, action) {
-    return {
-        counter: counter(state.counter, action),
-        todos: todos(state.todos, action)
-    }
-}
+// function reduce(state, action) {
+//     if (state === undefined) {
+//         return {
+//             counter: counter(undefined, action),
+//             todos: todos(undefined, action)
+//         }
+//     } else {
+//
+//         return {
+//             counter: counter(state.counter, action),
+//             todos: todos(state.todos, action)
+//         }
+//     }
+// }
 
 export default reduce;
