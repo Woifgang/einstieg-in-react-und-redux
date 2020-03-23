@@ -6,6 +6,9 @@ import TodoAdd from './TodoAdd';
 import {incrementCounter} from "../actions";
 import {connect} from "react-redux";
 
+import {BrowserRouter, Route} from 'react-router-dom';
+
+
 class App extends Component {
 
     constructor(props) {
@@ -42,15 +45,19 @@ class App extends Component {
 
     render() {
         return (
-            <div className="App">
-                <h1>Todo-List</h1>
-                <TodoList todo={this.state.todo}></TodoList>
-                <br/>
-                <TodoAdd onAdd={this.addTodo}></TodoAdd>
-                {/*<button onClick={this.addTodo}>Add Todo</button>*/}
-                <h1>Klickzähler: {this.props.value}</h1>
-                <button onClick={this.props.onIncrement}>zähle hoch</button>
-            </div>
+            <BrowserRouter>
+                <div className="App">
+                    <h1>Todo-List</h1>
+                    <Route path="/todo" component={TodoList}/>
+                    <Route path="/click" component={TodoAdd}/>
+                    {/*<TodoList todo={this.state.todo}></TodoList>*/}
+                    <br/>
+                    {/*<TodoAdd onAdd={this.addTodo}></TodoAdd>*/}
+                    {/*<button onClick={this.addTodo}>Add Todo</button>*/}
+                    <h1>Klickzähler: {this.props.value}</h1>
+                    <button onClick={this.props.onIncrement}>zähle hoch</button>
+                </div>
+            </BrowserRouter>
         );
     }
 }
