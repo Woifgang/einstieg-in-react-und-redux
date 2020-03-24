@@ -10,6 +10,7 @@ class Navigation extends Component {
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/todo">Aufgaben ({this.props.todoCounter})</Link></li>
                 <li><Link to="/click">Klickzähler ({this.props.counter})</Link></li>
+                <li><Link to="/wikipedia">Wikipedia API</Link></li>
             </ul>
         );
     }

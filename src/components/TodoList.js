@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './TodoList.css';
 import {connect} from 'react-redux';
-import {addTodo, incrementCounter} from "../actions/index";
+import {addTodo} from "../actions/index";
 import TodoAdd from "./TodoAdd";
 
 

@@ -34,7 +34,7 @@ class TodoAdd extends Component {
     render() {
         let button = null;
 
-        if (this.state.newTodo != "") {
+        if (this.state.newTodo !== "") {
             button = (
                 <button onClick={this.onTodoAdd}>Todo hinzufügen ({this.state.newTodo.length})</button>
             );
