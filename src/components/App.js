@@ -3,10 +3,13 @@ import './App.css';
 
 import TodoList from './TodoList';
 import TodoAdd from './TodoAdd';
+import Clickcounter from "./Clickcounter";
+import Home from "./Home";
+import Navigation from "./Navigation";
 import {incrementCounter} from "../actions";
 import {connect} from "react-redux";
 
-import {BrowserRouter, Route} from 'react-router-dom';
+import {HashRouter, Route} from 'react-router-dom';
 
 
 class App extends Component {
@@ -45,35 +48,38 @@ class App extends Component {
 
     render() {
         return (
-            <BrowserRouter>
+            <HashRouter>
                 <div className="App">
-                    <h1>Todo-List</h1>
+
+                    <Navigation></Navigation>
+
+                    <Route exact path="/" component={Home}/>
                     <Route path="/todo" component={TodoList}/>
-                    <Route path="/click" component={TodoAdd}/>
+                    <Route path="/click" component={Clickcounter}/>
                     {/*<TodoList todo={this.state.todo}></TodoList>*/}
-                    <br/>
-                    {/*<TodoAdd onAdd={this.addTodo}></TodoAdd>*/}
-                    {/*<button onClick={this.addTodo}>Add Todo</button>*/}
-                    <h1>Klickzähler: {this.props.value}</h1>
-                    <button onClick={this.props.onIncrement}>zähle hoch</button>
+                    {/*<br/>*/}
+                    {/*/!*<TodoAdd onAdd={this.addTodo}></TodoAdd>*!/*/}
+                    {/*/!*<button onClick={this.addTodo}>Add Todo</button>*!/*/}
+                    {/*<h1>Klickzähler: {this.props.value}</h1>*/}
+                    {/*<button onClick={this.props.onIncrement}>zähle hoch</button>*/}
                 </div>
-            </BrowserRouter>
+            </HashRouter>
         );
     }
 }
 
 
-let mapStateToProps = function (state) {
-    return {
-        value: state.counter
-    };
-}
+// let mapStateToProps = function (state) {
+//     return {
+//         value: state.counter
+//     };
+// }
+//
+// let mapDispatchToProbs = {
+//     onIncrement: incrementCounter
+// }
 
-let mapDispatchToProbs = {
-    onIncrement: incrementCounter
-}
-
-let AppContainer = connect(mapStateToProps, mapDispatchToProbs)(App);
+// let AppContainer = connect(mapStateToProps, mapDispatchToProbs)(App);
 
 
-export default AppContainer;
+export default App;
