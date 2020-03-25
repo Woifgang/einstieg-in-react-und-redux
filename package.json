@@ -14,7 +14,10 @@
     "react-router-app": "^0.1.6",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",
-    "redux": "^3.6.0"
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.3.0",
+    "superagent": "^5.2.2",
+    "superagent-jsonp": "^0.2.1"
   },
   "scripts": {
     "start": "react-scripts start",

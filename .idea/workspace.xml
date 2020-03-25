@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b67c0062-1c6a-4723-ae21-5dd382373d95" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Wikipedia.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/WikipediaResults.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/wikipedia.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TodoAdd.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoAdd.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TodoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TodoList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/counter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/counter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WikipediaResults.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WikipediaResults.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +66,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Code/Laravel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Laravel" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -104,7 +104,7 @@
     <configuration name="npm install" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="install" />
-      <arguments value="react-router-dom" />
+      <arguments value="redux-thunk" />
       <node-interpreter value="project" />
       <envs />
       <method v="2" />
@@ -153,6 +153,7 @@
       <workItem from="1584791731261" duration="597000" />
       <workItem from="1584989906517" duration="4746000" />
       <workItem from="1585072907514" duration="7604000" />
+      <workItem from="1585158738773" duration="5553000" />
     </task>
     <task id="LOCAL-00001" summary="Kapitel 1-4">
       <created>1583782718886</created>
@@ -267,11 +268,15 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="555" y="200" width="800" height="672" key="#Inspections/0.0.1920.1080@0.0.1920.1080" timestamp="1584993505558" />
-    <state x="418" y="197" width="883" height="672" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585073055597">
+    <state x="418" y="197" width="883" height="672" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585161894041">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="418" y="197" width="883" height="672" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1585073055597" />
+    <state x="418" y="197" width="883" height="672" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1585161894041" />
     <state x="418" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.1103.1920.1080/0.0.1920.1080/1920.23.1920.1080@0.0.1920.1080" timestamp="1583782870303" />
+    <state x="696" y="345" width="517" height="383" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585159736176">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="696" y="345" width="517" height="383" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1585159736176" />
     <state x="743" y="247" width="424" height="579" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1585073008008">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -290,25 +295,25 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="825" y="435" key="Github.ShareDialog/0.1103.1920.1080/0.0.1920.1080/1920.23.1920.1080@0.0.1920.1080" timestamp="1583782658625" />
-    <state width="1878" height="388" key="GridCell.Tab.0.bottom" timestamp="1585079675423">
+    <state width="1878" height="242" key="GridCell.Tab.0.bottom" timestamp="1585162491358">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="388" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1585079675423" />
+    <state width="1878" height="242" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1585162491358" />
     <state width="1878" height="132" key="GridCell.Tab.0.bottom/0.1103.1920.1080/0.0.1920.1080/1920.23.1920.1080@0.0.1920.1080" timestamp="1583782971196" />
-    <state width="1878" height="388" key="GridCell.Tab.0.center" timestamp="1585079675423">
+    <state width="1878" height="242" key="GridCell.Tab.0.center" timestamp="1585162491358">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="388" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1585079675423" />
+    <state width="1878" height="242" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1585162491358" />
     <state width="1878" height="132" key="GridCell.Tab.0.center/0.1103.1920.1080/0.0.1920.1080/1920.23.1920.1080@0.0.1920.1080" timestamp="1583782971196" />
-    <state width="1878" height="388" key="GridCell.Tab.0.left" timestamp="1585079675423">
+    <state width="1878" height="242" key="GridCell.Tab.0.left" timestamp="1585162491358">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="388" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1585079675423" />
+    <state width="1878" height="242" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1585162491358" />
     <state width="1878" height="132" key="GridCell.Tab.0.left/0.1103.1920.1080/0.0.1920.1080/1920.23.1920.1080@0.0.1920.1080" timestamp="1583782971196" />
-    <state width="1878" height="388" key="GridCell.Tab.0.right" timestamp="1585079675423">
+    <state width="1878" height="242" key="GridCell.Tab.0.right" timestamp="1585162491358">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="388" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1585079675423" />
+    <state width="1878" height="242" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1585162491358" />
     <state width="1878" height="132" key="GridCell.Tab.0.right/0.1103.1920.1080/0.0.1920.1080/1920.23.1920.1080@0.0.1920.1080" timestamp="1583782971196" />
     <state width="1878" height="357" key="GridCell.Tab.1.bottom" timestamp="1584994654104">
       <screen x="0" y="0" width="1920" height="1080" />

@@ -3,22 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
 import * as serviceWorker from './components/serviceWorker';
-import {createStore} from "redux";
+import {createStore, applyMiddleware} from "redux";
+import thunkMiddleware from "redux-thunk";
 import counter from "./reducers/index";
 import {Provider} from "react-redux";
 
-// import {BrowserRouter, Route} from 'react-router-dom';
 
 
-let store = createStore(counter);
+let store = createStore(counter, applyMiddleware(thunkMiddleware));
 
 
 ReactDOM.render(
     <Provider store={store}>
-        {/*<BrowserRouter>*/}
-            {/*<Route path="/servus" component={App}/>*/}
             <App/>
-        {/*</BrowserRouter>*/}
     </Provider>
     ,
     document.getElementById('root')
