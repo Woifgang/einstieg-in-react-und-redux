@@ -9,6 +9,8 @@ import Wikipedia from "./Wikipedia";
 
 import {HashRouter, Route} from 'react-router-dom';
 import WikipediaResults from "./WikipediaResults";
+import TestApi from "./TestApi";
+import TestApiResults from "./TestApiResults";
 
 
 class App extends Component {
@@ -25,6 +27,8 @@ class App extends Component {
                     <Route path="/click" component={Clickcounter}/>
                     <Route path="/wikipedia" component={Wikipedia}/>
                     <Route path="/wikipedia-results/:search" component={WikipediaResults}/>
+                    <Route path="/testApi" component={TestApi}></Route>
+                    <Route path="/testApi-results/:search" component={TestApiResults}></Route>
                 </div>
             </HashRouter>
         );

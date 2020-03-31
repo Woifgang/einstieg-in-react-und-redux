@@ -3,11 +3,13 @@ import {combineReducers} from "redux";
 import counter from "./counter";
 import todos from "./todos";
 import wikipedia from "./wikipedia";
+import testApi from "./testApi";
 
 let reduce = combineReducers({
     counter: counter,
     todos: todos,
-    wikipedia: wikipedia
+    wikipedia: wikipedia,
+    testApi : testApi
 });
 
 // function reduce(state, action) {

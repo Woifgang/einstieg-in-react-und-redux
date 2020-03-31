@@ -14,6 +14,7 @@ class WikipediaResults extends Component {
     render() {
         if (this.props.response) {
             console.log(this.props.response.body.query.search);
+            console.log(this);
         }
         return (
 
